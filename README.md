@@ -33,7 +33,7 @@ https://pbasv.cloudfree.jp/<br>
 - guessLanguage.js, _languageData.js : 言語識別
 - combobox.js, imageselect.js : Webページの入力インターフェースを生成するためのクラス
 
-## 加算ダメージ計算のサンプルコード
+## (加算)ダメージ計算のサンプルコード
 js/pokemon.jsの末尾の関数（最終行のコメントアウトは削除済み）
 ```
 (async () => {
