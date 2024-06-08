@@ -34,7 +34,7 @@ https://pbasv.cloudfree.jp/<br>
 - combobox.js, imageselect.js : Webページの入力インターフェースを生成するためのクラス
 
 ## 加算ダメージ計算のサンプルコード
-js/pokemon.jsの末尾の関数（最終行のコメントアウトを外す）
+js/pokemon.jsの末尾の関数（最終行のコメントアウトは削除済み）
 ```
 (async () => {
     await Pokemon.init()
