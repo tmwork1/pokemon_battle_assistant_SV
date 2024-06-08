@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description">
+    <meta property="og:title" content="トップページ">
+    <meta property="og:site_name" content="site name">
+    <meta property="og:description" content="description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:card" content="summary">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="css/combobox.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/manager.css">
+    <title></title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="img/SV_logo.png" id="SV-logo" height="40px">
+        </div>
+        <div class="header-right">
+            <p id="video-button">キャプチャ表示</p>
+            <a id="write">バックアップ</a>
+            <p><label>復元<input type="file" id="read" accept=".txt"></label></p>
+            <a href="index.html" target="_blank">HOME</a>
+        </div>
+    </div>
+    <div class="container">
+        <p id="annotation"></p>
+        <div class="container-left">
+            <div id="nickname">
+                <button id="new-button">New</button>
+                <div class="combobox">
+                    <div class="group">
+                        <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ニックネームを入力して登録 (自動保存)">
+                        <button type="button" aria-expanded="false" tabindex="-1"></button>
+                    </div>
+                    <ul></ul>
+                </div>
+                <input type="image" src="img/search.png" id="load-pokemon">
+            </div>
+            <div id="nickname-message"></div>
+            <div id="type"><img><img></div>
+            <div id="icon"><img></div>
+            <div class="img-item-Ttype">
+                <img id="img-item">
+                <img id="img-Ttype">
+            </div>
+            <div class="combobox" id="name">
+                <div class="group">
+                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="combobox" id="nature">
+                <div class="group">
+                    <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="性格">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="combobox" id="ability">
+                <div class="group">
+                    <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="特性">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="combobox" id="item">
+                <div class="group">
+                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="combobox" id="Ttype">
+                <div class="group">
+                    <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="テラスタイプ">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="combobox move" id="move1">
+                <div class="group">
+                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ 1">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="combobox move" id="move2">
+                <div class="group">
+                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ 2">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="combobox move" id="move3">
+                <div class="group">
+                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ 3">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="combobox move" id="move4">
+                <div class="group">
+                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ 4">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <div id="status-table">
+                <div id="level"><span>Lv.</span><input type="number" value="50" min="1" max="100" step="1"></div>
+                <p></p><p id="remaining-effort">508</p><p>実数値</p>
+                <div class="table-grid"></div>
+                <p class="status-label">H</p><div class="base"></div>
+                <div class="indiv"><input type="number" value="31" min="0" max="31" step="1"></div>
+                <div class="effort-bar"><span class="effort-min">−</span><input type="range" value="0" min="0" max="32" step="1"><span class="effort-max">+</span></div>
+                <div class="effort"><input type="number" value="0" min="0" max="252" step="4"></div>
+                <div class="status"><input type="number" value="100" min="1" max="999" step="1"></div>
+                <p class="status-label">A</p><div class="base"></div>
+                <div class="indiv"><input type="number" value="31" min="0" max="31" step="1"></div>
+                <div class="effort-bar"><span class="effort-min">−</span><input type="range" value="0" min="0" max="32" step="1"><span class="effort-max">+</span></div>
+                <div class="effort"><input type="number" value="0" min="0" max="252" step="4"></div>
+                <div class="status"><input type="number" value="100" min="1" max="999" step="1"></div>
+                <p class="status-label">B</p><div class="base"></div>
+                <div class="indiv"><input type="number" value="31" min="0" max="31" step="1"></div>
+                <div class="effort-bar"><span class="effort-min">−</span><input type="range" value="0" min="0" max="32" step="1"><span class="effort-max">+</span></div>
+                <div class="effort"><input type="number" value="0" min="0" max="252" step="4"></div>
+                <div class="status"><input type="number" value="100" min="1" max="999" step="1"></div>
+                <p class="status-label">C</p><div class="base"></div>
+                <div class="indiv"><input type="number" value="31" min="0" max="31" step="1"></div>
+                <div class="effort-bar"><span class="effort-min">−</span><input type="range" value="0" min="0" max="32" step="1"><span class="effort-max">+</span></div>
+                <div class="effort"><input type="number" value="0" min="0" max="252" step="4"></div>
+                <div class="status"><input type="number" value="100" min="1" max="999" step="1"></div>
+                <p class="status-label">D</p><div class="base"></div>
+                <div class="indiv"><input type="number" value="31" min="0" max="31" step="1"></div>
+                <div class="effort-bar"><span class="effort-min">−</span><input type="range" value="0" min="0" max="32" step="1"><span class="effort-max">+</span></div>
+                <div class="effort"><input type="number" value="0" min="0" max="252" step="4"></div>
+                <div class="status"><input type="number" value="100" min="1" max="999" step="1"></div>
+                <p class="status-label">S</p><div class="base"></div>
+                <div class="indiv"><input type="number" value="31" min="0" max="31" step="1"></div>
+                <div class="effort-bar"><span class="effort-min">−</span><input type="range" value="0" min="0" max="32" step="1"><span class="effort-max">+</span></div>
+                <div class="effort"><input type="number" value="0" min="0" max="252" step="4"></div>
+                <div class="status"><input type="number" value="100" min="1" max="999" step="1"></div>
+            </div>
+            <div id="description">
+                <textarea placeholder="メモ"></textarea>
+            </div>
+            <div id="delete-button">
+                <button>削除</button>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="damage-calc-wrapper">
+                <div class="damage-calc">
+                    <div class="tuning-window">
+                        <div class="tuning-button" id="opt-defence">耐久調整</div>
+                        <div class="tuning-button" id="maximize-BD">総合耐久</div>
+                        <div class="tuning-button" id="maximize-B">物理耐久</div>
+                        <div class="tuning-button" id="maximize-D">特殊耐久</div>
+                        <div id="effort-list-label">H - B - D</div>
+                        <div id="effort-list"></div>
+                    </div>
+                    <div class="damage-window-wrapper">
+                        <div class="damage-window">
+                            <div class="add-damage-wrapper">
+                                <p class="add-damage-widget">ダメージ計算を追加</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="damage-selection-wrapper">
+                        <div class="damage-selection">
+                            <div class="damage-selection-top">
+                                <div class="damage-selection-top-left">
+                                    <div class="cross close-button"></div>
+                                    <div id="run-opt">計算</div>
+                                </div>
+                                <div class="damage-selection-top-right">
+                                    <div class="command-button" id="select-all">すべて選択</div>
+                                    <div class="command-button" id="deselect-all">すべて選択解除</div>
+                                    <div class="command-button" id="reset">リセット</div>
+                                </div>
+                            </div>
+                            <div class="damage-miniwidget-wrapper">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pokemon-list-wrapper">
+                <div class="pokemon-list">
+                    <div class="pokemon-list-top">
+                        <div class="cross close-button"></div>
+                        <div class="filter">
+                            <img id="filter-icon" src="img/filter.svg">
+                            <div class="combobox" id="filter-nickname">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ニックネーム">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-type">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="タイプ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-ability">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="特性">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-item">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-Ttype">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="テラスタル">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pokemon-list-main">
+                    </div>
+                </div>
+            </div>
+            <div class="capture-window">
+                <canvas id="canvas-capture"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="post">
+            <p>このサイトを共有</p>
+        </div>
+        <div id="copyright">&copy; 2024 sitename</div>
+    </div>
+    <div class="hidden">
+        <canvas id="canvas-trim"></canvas>
+        <canvas id="canvas-template"></canvas>
+        <p id="progress">Progress</p>
+        <p id="result">Result</p>   
+        <video id="capture-video"></video>
+        <div class="effort-item"><p></p><p></p></div>
+        <div class="damage-widget">
+            <div class="enemy-widget-wrapper">
+                <div class="enemy-widget">
+                    <div class="enemy-icon"><img></div>
+                    <div class="combobox enemy-name">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="combobox enemy-nature">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="性格">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="combobox enemy-ability">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="特性">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="combobox enemy-item">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="combobox enemy-Ttype">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="テラスタイプ">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="enemy-status-label">
+                        <span>H</span><span>A</span><span>B</span><span>C</span><span>D</span><span>S</span>
+                    </div>
+                    <div class="enemy-effort">
+                        <input type="number" value="0" min="0" max="252" step="4">
+                        <input type="number" value="0" min="0" max="252" step="4">
+                        <input type="number" value="0" min="0" max="252" step="4">
+                        <input type="number" value="0" min="0" max="252" step="4">
+                        <input type="number" value="0" min="0" max="252" step="4">
+                        <input type="number" value="0" min="0" max="252" step="4">
+                    </div>
+                    <div class="enemy-status">
+                        <input type="number" value="0" min="0" max="999" step="1">
+                        <input type="number" value="0" min="0" max="999" step="1">
+                        <input type="number" value="0" min="0" max="999" step="1">
+                        <input type="number" value="0" min="0" max="999" step="1">
+                        <input type="number" value="0" min="0" max="999" step="1">
+                        <input type="number" value="0" min="0" max="999" step="1">
+                    </div>
+                    <div class="combobox weather">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="天候">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="combobox field">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="フィールド">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="total-damage">
+                        <p class="AD">攻</p>
+                        <p class="total-damage-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="add-battle-widget">
+                <div class="dli-plus"></div>
+            </div>
+        </div>
+        <div class="battle-widget-wrapper">
+            <div class="battle-widget">
+                <div class="partition-v1"></div>
+                <div class="partition-h1"></div>
+                <div class="condition1">
+                    <div class="combobox ailment">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="状態異常">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="rank"><label>ランク <input type="number" value="0" min="-6" max="6" step="1"></label></div>
+                    <div class="terastal"><label><input type="checkbox"> テラスタル</label></div>
+                    <div class="hasItem"><label><input type="checkbox" checked> もちもの</label></div>
+                </div>
+                <div class="condition2">
+                    <div class="combobox ailment">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="状態異常">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="rank"><label>ランク <input type="number" value="0" min="-6" max="6" step="1"></label></div>
+                    <div class="terastal"><label><input type="checkbox"> テラスタル</label></div>
+                    <div class="hasItem"><label><input type="checkbox" checked="checked"> もちもの</label></div>
+                </div>
+                <div class="wall"><label><input type="checkbox"> リフレクター・ひかりのかべ</label></div>
+                <div class="stealthrock-critical">
+                    <div class="stealthrock"><label><input type="checkbox"> ステルスロック</label></div>
+                    <div class="critical"><label><input type="checkbox"> 急所</label></div>
+                </div>
+                <div class="damage-option">
+                    <div class="enhance"><label><input type="checkbox" checked> 威力上昇</label></div>
+                    <div class="nCombo"><label>回数 <input type="number" min="1" step="1"></label></div>
+                    <div class="skinDamage"><label><input type="checkbox"> ばけのかわ</label></div>
+                    <div class="metDamage"><label><input type="checkbox"> ゴツゴツメット</label></div>
+                    <div class="orbDamage"><label><input type="checkbox"> いのちのたま</label></div>
+                    <div class="weatherDamage"><label><input type="checkbox"> 天候ダメージ・回復</label></div>
+                    <div class="glassRecovery"><label><input type="checkbox" checked> グラスフィールド回復</label></div>
+                    <div class="ailmentDamage"><label><input type="checkbox"> 状態異常ダメージ</label></div>
+                </div>
+                <div class="battlemove-wrapper">
+                    <div class="combobox battlemove">
+                        <div class="group">
+                            <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                            <button type="button" aria-expanded="false" tabindex="-1"></button>
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <img class="delete-battle-widget" src="img/trash.svg">
+                </div>
+                <div class="damage">
+                    <p class="damage-text"></p>
+                </div>
+            </div>
+        </div>
+        <div class="damage-miniwidget">
+            <input type="checkbox" class="enable" checked>
+            <span class="dmw-status"></span>
+            <img class="dmw-enemy-icon">
+            <img class="dmw-item-icon">
+            <img class="dmw-Ttype-icon">
+            <span class="dmw-move"></span>
+            を
+            <input type="number" class="survival-prob" value="100" min="0" max="100" step="1">
+            %以上の確率で
+            <input type="number" class="survival-num" value="1" min="1" max="9" step="1">
+            回耐える
+        </div>
+        <div class="registered-wrapper">
+            <div class="registered">
+                <div class="registered-icon"><img></div>
+                <div class="registered-nickname"></div>
+                <div class="registered-ability-item-Ttype">
+                    <span class="registered-ability"></span>
+                    <div class="registered-item-Ttype">
+                        <img class="registered-item">
+                        <img class="registered-Ttype">
+                    </div>
+                </div>
+                <div class="registered-status">
+                    <span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>
+                </div>
+                <div class="registered-effort">
+                    <span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>
+                </div>
+                <div class="registered-move-delete">
+                    <div class="registered-move">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <input type="image" class="registered-delete" src="img/trash.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tesseract.min.js"></script>
+    <script src="js/opencv.js"></script>
+    <script src="js/manager.js" type="module"></script>
+    <noscript>JavaScriptが利用できません。</noscript>
+</body>
+</html>

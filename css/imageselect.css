@@ -1,0 +1,55 @@
+@charset "utf-8";
+.ImageSelector {
+    display: inline-flex;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.ImageSelector__display,.ImageSelector__preview,.ImageSelector__preview-child {
+    display: flex;
+    align-items: center;
+}
+.ImageSelector__option {
+    display: inline-flex;
+}
+.ImageSelector__option:hover {
+    background-color: #dfdfdf;
+}
+/*
+.ImageSelector__icon {
+    width: 20px;
+    position: relative;
+}
+.ImageSelector__icon::before,.ImageSelector__icon::after {
+    content: "";
+    width: 50%;
+    height: 4px;
+    position: absolute;
+    top: 55%;
+    background-color: #555;
+}
+.ImageSelector__icon::before {
+    left: 0;
+    transform-origin: bottom right;
+    transform: translate(0,-50%) rotate(45deg);
+}
+.ImageSelector__icon::after {
+    left: 50%;
+    transform-origin: bottom left;
+    transform: translate(0,-50%) rotate(-45deg);
+}
+*/
+.ImageSelector__pulldown {
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-height: 500%;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    overflow-y: auto;
+}
+.ImageSelector__s-spread {
+    display: flex;
+}
+

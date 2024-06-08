@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>ポケモンビュー
+</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/combobox.css">
+    <link rel="stylesheet" href="css/pokemon_view.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nickname">
+            <div class="combobox">
+                <div class="group">
+                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ニックネームを入力">
+                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                </div>
+                <ul></ul>
+            </div>
+            <button id="main-button"></button>
+        </div>
+        <div id="icon">
+            <img width="120" height="120">
+        </div>
+        <div id="item-Ttype">
+            <img id="item" width="50" height="50">
+            <img id="Ttype" width="40" height="40">
+        </div>
+        <div id="nature"></div>
+        <div id="ability"></div>
+
+        <div class="move" id="move1"></div>
+        <div class="move" id="move2"></div>
+        <div class="move" id="move3"></div>
+        <div class="move" id="move4"></div>
+
+        <div id="label">
+            <div></div><div>HP</div><div>攻撃</div><div>防御</div><div>特攻</div><div>特防</div><div>素早さ</div>
+        </div>
+        <div id="base">
+            <div>種族値</div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div id="indiv">
+            <div>個体値</div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div id="effort">
+            <div>努力値</div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div id="status">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div id="description">
+            <textarea rows="6" placeholder="メモ"></textarea>
+        </div>
+        <div id="delete-button">
+            <button>削除</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>設定
+</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/combobox.css">
+    <link rel="stylesheet" href="css/setting.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>映像入力</h3>
+        <div class="combobox" id="videoSrc">
+            <div class="group">
+                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="デフォルト">
+                <button type="button" aria-expanded="false" tabindex="-1"></button>
+            </div>
+            <ul></ul>
+        </div>
+        <br>
+        <h3>選出画面</h3>
+        相手のポケモンの検索範囲：<label>使用率上位 <input type="number" id="template-length" min="50" max="999" step="1"></label>
+        <br>
+        <label><input type="checkbox" id="guide-selection"> 有利なポケモンを強調して表示する</label>
+    </div>
+    <br>
+    <div>
+        <h3>ダメージ計算</h3>
+        <label><input type="checkbox" id="recognize-hp"> 自分の残りHPを参照する</label>
+        <br>
+        <label><input type="checkbox" id="recognize-enemy-hp"> 相手の残りHPを参照する</label>
+        <br>
+        <label><input type="checkbox" id="damage-shade"> ダメージが大きい技を強調して表示する</label>
+        <br>
+        <label><input type="checkbox" id="damage-color"> タイプごとに色分けして表示する</label>
+    </div>
+</body>
+</html>

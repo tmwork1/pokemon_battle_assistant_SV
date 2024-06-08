@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description">
+    <meta property="og:title" content="トップページ">
+    <meta property="og:site_name" content="site name">
+    <meta property="og:description" content="description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:card" content="summary">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="css/combobox.css">
+    <link rel="stylesheet" href="css/radiobox.css">
+    <link rel="stylesheet" href="css/radioimage.css">
+    <link rel="stylesheet" href="css/imageselect.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title></title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="img/SV_logo.png" id="SV-logo" height="40px">
+        </div>
+        <div class="header-right">
+            <p id="setting">詳細設定</label></p>
+            <p id="balance-check-button"><span>バランスチェック</span></label></p>
+            <a href="manager.html" target="_blank">ポケモン管理</a>
+        </div>
+    </div>
+    <div class="container">
+        <p id="annotation"></p>
+        <div class="container-left">
+            <div class="party-window">
+                <div class="pokemon-wrapper">
+                    <div class="pokemon-window">
+                        <div class="name-wrapper">
+                            <input type="image" src="img/search.png" class="load-pokemon">
+                            <div class="combobox name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="item-Ttype-wrapper">
+                            <img class="img-item">
+                            <img class="img-Ttype">
+                            <input type="image" src="img/unsaved.png" class="save-pokemon">
+                        </div>
+                        <div class="img-pokemon"><img></div>
+                        <div class="combobox nature">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="性格">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox ability">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="特性">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox item">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox Ttype">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="テラスタイプ">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="move-wrapper">
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="status-label">
+                            <span>H</span><span>A</span><span>B</span><span>C</span><span>D</span><span>S</span>
+                        </div>
+                        <div class="indiv">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                        </div>
+                        <div class="effort">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                        </div>
+                        <div class="status">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="pokemon-wrapper">
+                    <div class="pokemon-window">
+                        <div class="name-wrapper">
+                            <input type="image" src="img/search.png" class="load-pokemon">
+                            <div class="combobox name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="item-Ttype-wrapper">
+                            <img class="img-item">
+                            <img class="img-Ttype">
+                            <input type="image" src="img/unsaved.png" class="save-pokemon">
+                        </div>
+                        <div class="img-pokemon"><img></div>
+                        <div class="combobox nature">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="性格">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox ability">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="特性">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox item">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox Ttype">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="テラスタイプ">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="move-wrapper">
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="status-label">
+                            <span>H</span><span>A</span><span>B</span><span>C</span><span>D</span><span>S</span>
+                        </div>
+                        <div class="indiv">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                        </div>
+                        <div class="effort">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                        </div>
+                        <div class="status">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="pokemon-wrapper">
+                    <div class="pokemon-window">
+                        <div class="name-wrapper">
+                            <input type="image" src="img/search.png" class="load-pokemon">
+                            <div class="combobox name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="item-Ttype-wrapper">
+                            <img class="img-item">
+                            <img class="img-Ttype">
+                            <input type="image" src="img/unsaved.png" class="save-pokemon">
+                        </div>
+                        <div class="img-pokemon"><img></div>
+                        <div class="combobox nature">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="性格">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox ability">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="特性">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox item">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox Ttype">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="テラスタイプ">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="move-wrapper">
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="status-label">
+                            <span>H</span><span>A</span><span>B</span><span>C</span><span>D</span><span>S</span>
+                        </div>
+                        <div class="indiv">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                        </div>
+                        <div class="effort">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                        </div>
+                        <div class="status">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="pokemon-wrapper">
+                    <div class="pokemon-window">
+                        <div class="name-wrapper">
+                            <input type="image" src="img/search.png" class="load-pokemon">
+                            <div class="combobox name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="item-Ttype-wrapper">
+                            <img class="img-item">
+                            <img class="img-Ttype">
+                            <input type="image" src="img/unsaved.png" class="save-pokemon">
+                        </div>
+                        <div class="img-pokemon"><img></div>
+                        <div class="combobox nature">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="性格">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox ability">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="特性">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox item">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox Ttype">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="テラスタイプ">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="move-wrapper">
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="status-label">
+                            <span>H</span><span>A</span><span>B</span><span>C</span><span>D</span><span>S</span>
+                        </div>
+                        <div class="indiv">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                        </div>
+                        <div class="effort">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                        </div>
+                        <div class="status">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="pokemon-wrapper">
+                    <div class="pokemon-window">
+                        <div class="name-wrapper">
+                            <input type="image" src="img/search.png" class="load-pokemon">
+                            <div class="combobox name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="item-Ttype-wrapper">
+                            <img class="img-item">
+                            <img class="img-Ttype">
+                            <input type="image" src="img/unsaved.png" class="save-pokemon">
+                        </div>
+                        <div class="img-pokemon"><img></div>
+                        <div class="combobox nature">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="性格">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox ability">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="特性">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox item">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox Ttype">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="テラスタイプ">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="move-wrapper">
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="status-label">
+                            <span>H</span><span>A</span><span>B</span><span>C</span><span>D</span><span>S</span>
+                        </div>
+                        <div class="indiv">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                        </div>
+                        <div class="effort">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                        </div>
+                        <div class="status">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="pokemon-wrapper">
+                    <div class="pokemon-window">
+                        <div class="name-wrapper">
+                            <input type="image" src="img/search.png" class="load-pokemon">
+                            <div class="combobox name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="item-Ttype-wrapper">
+                            <img class="img-item">
+                            <img class="img-Ttype">
+                            <input type="image" src="img/unsaved.png" class="save-pokemon">
+                        </div>
+                        <div class="img-pokemon"><img></div>
+                        <div class="combobox nature">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="性格">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox ability">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="特性">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox item">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="combobox Ttype">
+                            <div class="group">
+                                <input type="text" aria-autocomplete="none" aria-expanded="false" placeholder="テラスタイプ">
+                                <button type="button" aria-expanded="false" tabindex="-1"></button>
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="move-wrapper">
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <div class="status-label">
+                            <span>H</span><span>A</span><span>B</span><span>C</span><span>D</span><span>S</span>
+                        </div>
+                        <div class="indiv">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                            <input type="number" value="31" min="0" max="31" step="1">
+                        </div>
+                        <div class="effort">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                            <input type="number" value="0" min="0" max="252" step="4">
+                        </div>
+                        <div class="status">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                            <input type="text" value="100" min="1" max="999" step="1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="damage-window">
+                <div class="attack-damage-window">
+                    <div class="damage-wrapper">
+                        <div class="attack-damage-label">
+                            <div class="attack-move">
+                                <div class="critical">
+                                    <label><input type="checkbox" id="critical-attack"> 急所</label>
+                                </div>
+                            </div>
+                            <div class="attack-damage1">BD特化</div>
+                            <div class="attack-damage2">H252</div>
+                            <div class="attack-damage3">無振り</div>
+                        </div>   
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="attack-damage-box">
+                            <div class="attack-move"></div>
+                            <div class="attack-damage1"><span></span><br><span></span></div>
+                            <div class="attack-damage2"><span></span><br><span></span></div>
+                            <div class="attack-damage3"><span></span><br><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="attack-damage-box">
+                            <div class="attack-move"></div>
+                            <div class="attack-damage1"><span></span><br><span></span></div>
+                            <div class="attack-damage2"><span></span><br><span></span></div>
+                            <div class="attack-damage3"><span></span><br><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="attack-damage-box">
+                            <div class="attack-move"></div>
+                            <div class="attack-damage1"><span></span><br><span></span></div>
+                            <div class="attack-damage2"><span></span><br><span></span></div>
+                            <div class="attack-damage3"><span></span><br><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="attack-damage-box">
+                            <div class="attack-move"></div>
+                            <div class="attack-damage1"><span></span><br><span></span></div>
+                            <div class="attack-damage2"><span></span><br><span></span></div>
+                            <div class="attack-damage3"><span></span><br><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="defence-damage-window">
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-label">
+                            <div class="defence-move">
+                                <div class="critical">
+                                    <label><input type="checkbox" id="critical-defence"> 急所</label>
+                                </div>
+                            </div> 
+                            <div class="defence-damage1">AC特化</div>
+                            <div class="defence-damage2">252振り</div>
+                            <div class="defence-damage3">無振り</div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                    <div class="damage-wrapper">
+                        <div class="defence-damage-box">
+                            <div class="defence-move"><span></span><span></span></div>
+                            <div class="defence-damage1"><span></span><span></span></div>
+                            <div class="defence-damage2"><span></span><span></span></div>
+                            <div class="defence-damage3"><span></span><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="condition-window">
+                <div class="pokemon-condition-window">
+                    <div class="rank-label">
+                        <span>A</span><span>B</span><span>C</span><span>D</span><span>S</span>
+                    </div>
+                    <div class="rank" id="rank">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                    </div>
+                    <div class="radiobox ailment" id="ailment">
+                        <div><input type="radio" id='ailment1' name="ailment" value="どく"><label for="ailment1">どく</label></div>
+                        <div><input type="radio" id='ailment2' name="ailment" value="まひ"><label for="ailment2">まひ</label></div>
+                        <div><input type="radio" id='ailment3' name="ailment" value="やけど"><label for="ailment3">やけど</label></div>
+                    </div>
+                    <div class="wall">
+                        <label><input type="checkbox" id="wall"> リフレクター / ひかりのかべ</label>
+                    </div>
+                </div>
+                <div class="center-window">
+                    <div class="imageselect field-pokemon" id="field-pokemon">
+                        <img class="ImageSelector__option" style="transform: scaleX(-1);">
+                        <img class="ImageSelector__option" style="transform: scaleX(-1);">
+                        <img class="ImageSelector__option" style="transform: scaleX(-1);">
+                        <img class="ImageSelector__option" style="transform: scaleX(-1);">
+                        <img class="ImageSelector__option" style="transform: scaleX(-1);">
+                    </div>
+                    <div class="imageselect field-pokemon" id="field-enemy">
+                        <img class="ImageSelector__option">
+                        <img class="ImageSelector__option">
+                        <img class="ImageSelector__option">
+                        <img class="ImageSelector__option">
+                        <img class="ImageSelector__option">
+                    </div>
+                    <div id="terastal-hasItem">
+                        <input type="image" id="terastal" src="img/terastal_off.svg">
+                        <input type="image" id="has-item">
+                    </div>
+                    <div id="enemy-ability">
+                        <select>
+                            <option value="特性">特性</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="enemy-item-Ttype">
+                    <div class="radioimage" id="enemy-item">
+                        <input type="radio" name="enemy-item" id="enemy-item1"><label for="enemy-item1"><img></label>
+                        <input type="radio" name="enemy-item" id="enemy-item2"><label for="enemy-item2"><img></label>
+                        <input type="radio" name="enemy-item" id="enemy-item3"><label for="enemy-item3"><img></label>
+                        <input type="radio" name="enemy-item" id="enemy-item4"><label for="enemy-item4"><img></label>
+                        <input type="radio" name="enemy-item" id="enemy-item5"><label for="enemy-item5"><img></label>
+                        <input type="radio" name="enemy-item" id="enemy-item6"><label for="enemy-item6"><img></label>
+                        <input type="radio" name="enemy-item" id="enemy-item7"><label for="enemy-item7"><img></label>
+                        <input type="radio" name="enemy-item" id="enemy-item8"><label for="enemy-item8"><img></label>
+                        <input type="radio" name="enemy-item" id="enemy-item9"><label for="enemy-item9"><img></label>
+                        <input type="radio" name="enemy-item" id="enemy-item10"><label for="enemy-item10"><img></label>
+                    </div>
+                    <div class="radioimage" id="enemy-Ttype">
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype1'><label for="enemy-Ttype1"><img></label>
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype2'><label for="enemy-Ttype2"><img></label>
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype3'><label for="enemy-Ttype3"><img></label>
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype4'><label for="enemy-Ttype4"><img></label>
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype5'><label for="enemy-Ttype5"><img></label>
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype6'><label for="enemy-Ttype6"><img></label>
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype7'><label for="enemy-Ttype7"><img></label>
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype8'><label for="enemy-Ttype8"><img></label>
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype9'><label for="enemy-Ttype9"><img></label>
+                        <input type="radio" name="enemy-Ttype" id='enemy-Ttype10'><label for="enemy-Ttype10"><img></label>
+                    </div>
+                </div>
+                <div class="enemy-condition-window">
+                    <div class="rank-label">
+                        <span>A</span><span>B</span><span>C</span><span>D</span><span>S</span>
+                    </div>
+                    <div class="rank" id="enemy-rank">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                        <input type="number" value="0" min="-6" max="6" step="1">
+                    </div>
+                    <div class="radiobox ailment" id="enemy-ailment">
+                        <div><input type="radio" id='enemy-ailment1' name="enemy-ailment" value="どく"><label for="enemy-ailment1">どく</label></div>
+                        <div><input type="radio" id='enemy-ailment2' name="enemy-ailment" value="まひ"><label for="enemy-ailment2">まひ</label></div>
+                        <div><input type="radio" id='enemy-ailment3' name="enemy-ailment" value="やけど"><label for="enemy-ailment3">やけど</label></div>
+                    </div>
+                    <div class="wall">
+                        <label><input type="checkbox" id="enemy-wall"> リフレクター / ひかりのかべ</label>
+                    </div>
+                </div>
+                <div class="field-condition-window">
+                    <div class="radiobox" id="weather">
+                        <div><input type="radio" id='weather1' name="weather" value="はれ"><label for="weather1">はれ</label></div>
+                        <div><input type="radio" id='weather2' name="weather" value="あめ"><label for="weather2">あめ</label></div>
+                        <div><input type="radio" id='weather3' name="weather" value="ゆき"><label for="weather3">ゆき</label></div>
+                        <div><input type="radio" id='weather4' name="weather" value="すなあらし"><label for="weather4">すな</label></div>
+                    </div>
+                    <div class="radiobox" id="field">
+                        <div><input type="radio" id='field1' name="field" value="エレキフィールド"><label for="field1">エレキ</label></div>
+                        <div><input type="radio" id='field2' name="field" value="グラスフィールド"><label for="field2">グラス</label></div>
+                        <div><input type="radio" id='field3' name="field" value="サイコフィールド"><label for="field3">サイコ</label></div>
+                        <div><input type="radio" id='field4' name="field" value="ミストフィールド"><label for="field4">ミスト</label></div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-window">
+                <div id="screen">
+                    <canvas id="canvas-screen"></canvas>
+                    <div id="timer"></div>
+                </div>
+                <div class="enemy-party-window">
+                    <div class="enemy-pokemon">
+                        <div class="img-enemy"><img></div>
+                        <div>
+                            <div class="combobox enemy-name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="自動入力">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <p class="enemy-HP"></p>
+                        </div>
+                    </div>
+                    <div class="enemy-pokemon">
+                        <div class="img-enemy"><img></div>
+                        <div>
+                            <div class="combobox enemy-name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="自動入力">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <p class="enemy-HP"></p>
+                        </div>
+                    </div>
+                    <div class="enemy-pokemon">
+                        <div class="img-enemy"><img></div>
+                        <div>
+                            <div class="combobox enemy-name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="自動入力">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="enemy-HP"></div>
+                        </div>
+                    </div>
+                    <div class="enemy-pokemon">
+                        <div class="img-enemy"><img></div>
+                        <div>
+                            <div class="combobox enemy-name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="自動入力">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="enemy-HP"></div>
+                        </div>
+                    </div>
+                    <div class="enemy-pokemon">
+                        <div class="img-enemy"><img></div>
+                        <div>
+                            <div class="combobox enemy-name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="自動入力">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="enemy-HP"></div>
+                        </div>
+                    </div>
+                    <div class="enemy-pokemon">
+                        <div class="img-enemy"><img></div>
+                        <div>
+                            <div class="combobox enemy-name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="自動入力">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="enemy-HP"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="balance-check-wrapper">
+                <div id="balance-check">
+                    <div id="balance-check-top">
+                        <div class="cross" id="close-balance-check"></div>
+                        <div class="radiobox">
+                            <div><input type="radio" id='check-mode1' name="check-mode" value="attack"><label for="check-mode1">攻</label></div>
+                            <div><input type="radio" id='check-mode2' name="check-mode" value="defence"><label for="check-mode2">守</label></div>
+                        </div>
+                        <div id="recommend-type">
+                            <span>おすすめタイプ</span>
+                            <img src="data/type_img/0.png"><img src="data/type_img/0.png"><img src="data/type_img/0.png"><img src="data/type_img/0.png"><img src="data/type_img/0.png">
+                        </div>
+                        </div>
+                    <div id="balance-check-main">
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                        <div class="trend">
+                            <img class="trend-pokemon" src="data/icon/0.png">
+                            <img class="trend-item1" src="data/item_img/0.png">
+                            <img class="trend-item2" src="data/item_img/1.png">
+                            <img class="trend-item3" src="data/item_img/2.png">
+                            <img class="trend-Ttype1" src="data/type_img/0.png">
+                            <img class="trend-Ttype2" src="data/type_img/1.png">
+                            <img class="trend-Ttype3" src="data/type_img/2.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pokemon-list-wrapper">
+                <div class="pokemon-list">
+                    <div class="pokemon-list-top">
+                        <div class="cross" id="close-pokemon-list"></div>
+                        <div class="filter">
+                            <img id="filter-icon" src="img/filter.svg">
+                            <div class="combobox" id="filter-nickname">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ニックネーム">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-name">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="ポケモン">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-type">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="タイプ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-ability">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="特性">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-item">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="もちもの">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-Ttype">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="テラスタル">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                            <div class="combobox" id="filter-move">
+                                <div class="group">
+                                    <input type="text" aria-autocomplete="list" aria-expanded="false" placeholder="わざ">
+                                    <button type="button" aria-expanded="false" tabindex="-1"></button>
+                                </div>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pokemon-list-main">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="post">
+            <p>このサイトを共有</p>
+        </div>
+        <div id="copyright">&copy; 2024 sitename</div>
+    </div>
+    <canvas id="canvas-trim"></canvas>
+    <br>
+    <canvas id="canvas-capture"></canvas>
+    <div class="hidden">
+        <canvas id="canvas-template"></canvas>
+        <p id="progress">Progress</p>
+        <p id="result">Result</p>   
+        <video id="capture-video"></video>
+        <canvas id="canvas-name-buffer1"></canvas>
+        <canvas id="canvas-name-buffer2"></canvas>
+        <canvas id="canvas-hp-buffer"></canvas>
+        <div class="registered-wrapper">
+            <div class="registered">
+                <div class="registered-icon"><img></div>
+                <div class="registered-nickname"></div>
+                <div class="registered-ability-item-Ttype">
+                    <span class="registered-ability"></span>
+                    <div class="registered-item-Ttype">
+                        <img class="registered-item">
+                        <img class="registered-Ttype">
+                    </div>
+                </div>
+                <div class="registered-status">
+                    <span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>
+                </div>
+                <div class="registered-effort">
+                    <span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>-<span>100</span>
+                </div>
+                <div class="registered-move-delete">
+                    <div class="registered-move">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <input type="image" class="registered-delete" src="img/trash.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tesseract.min.js"></script>
+    <script src="js/opencv.js"></script>
+    <script src="js/_languageData.js"></script>
+    <script src="js/guessLanguage.js"></script>
+    <script src="js/index.js" type="module"></script>
+    <noscript>JavaScriptが利用できません。</noscript>
+</body>
+</html>

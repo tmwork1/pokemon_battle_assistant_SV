@@ -1,0 +1,35 @@
+.container {
+    padding: 0 60px;
+    color: #444444;
+    a {
+        text-decoration: underline;
+    }
+    .video {
+        margin-left: 20px;
+        text-align: left;
+    }
+    .red {
+        font-weight: bolder;
+        color: red;
+    }
+    h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 20px;
+        background-color: #838383;
+        color: #eeeeee;
+        padding: 2px 6px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    h3 {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    p {
+        margin-left: 20px;
+    }
+}
