@@ -33,5 +33,81 @@ https://pbasv.cloudfree.jp/<br>
 - guessLanguage.js, _languageData.js : 言語識別
 - combobox.js, imageselect.js : Webページの入力インターフェースを生成するためのクラス
 
-## ダメージ計算のサンプルコード
-js/pokemon.jsの末尾の関数
+## 加算ダメージ計算のサンプルコード
+js/pokemon.jsの末尾の関数（最終行のコメントアウトを外す）
+```
+(async () => {
+    await Pokemon.init()
+    
+    let p1 = new Pokemon('ハバタクカミ');
+    p1.loadZukan();
+    p1.nature = 'ひかえめ';
+    //p1.ability = 'フェアリースキン';
+    p1.effort = [0,252,0,252,0,0];
+    //p1.item = 'こだわりメガネ';
+    p1.Ttype = 'ステラ';
+    //p1.rank[1] = p1.rank[3] = 1;
+    //p1.ailment = 'やけど';
+    p1.terastal = true;
+    p1.updateStatus();
+
+    let p2 = new Pokemon('カイリュー');
+    p2.loadZukan();
+    //p2.nature = 'いじっぱり';
+    p2.ability = 'マルチスケイル';
+    p2.effort = [252,0,0,0,0,0];
+    p2.item = 'たべのこし';
+    //p2.Ttype = 'はがね';
+    //p2.rank[2] = p1.rank[4] = 1;
+    //p2.ailment = 'やけど';
+    //p2.terastal = true;
+    p2.updateStatus();
+
+    let attackSide = 0
+    let moves = ['ムーンフォース'];
+    //let moves = ['すいりゅうれんだ', 'アクアジェット'];
+
+    let damageTexts = [], notes = [], hp, lethalProb, lethalNum, damageRange = [0, 0];
+
+    for (let i=0; i<moves.length; i++) {
+        let battle = new Battle(p1.clone(), p2.clone());
+        //battle.weather = 'はれ'
+        //battle.field = 'エレキフィールド'
+        //battle.reflector = battle.lightwall = true
+        //battle.stealthrockDamage = true
+        if (Pokemon.criticalMoves.includes(moves[i])) {
+            battle.critical = true;
+        }
+        if (moves[i] in Pokemon.comboMoves) {
+            battle.nCombo = Pokemon.comboMoves[moves[i]][1];
+        }
+        damageTexts.push(
+            battle.damageText({
+                attackSide: attackSide,
+                move: moves[i],
+                format: 'full',
+                damageDigits: 1,
+                lethalProbDigits: 2,
+            })
+        );
+        notes.push(battle.note);
+        console.log(battle.damage);
+        damageRange[0] += Math.min(...Object.keys(battle.totalDamage));
+        damageRange[1] += Math.max(...Object.keys(battle.totalDamage));
+        if (i > 0) {
+            battle.maxRepeat = 1;
+            battle.lethal(hp);
+        }
+        hp = {...battle.hp};
+        lethalProb = battle.lethalProb;
+        lethalNum = battle.lethalNum;
+    }
+    console.log(p1);
+    console.log(p2);
+    console.log(damageTexts);
+    console.log(notes);
+    console.log(p2.damageText({
+        minDamage:damageRange[0],maxDamage:damageRange[1],lethalProb:lethalProb,lethalNum:lethalNum,
+    }));
+})()
+```
